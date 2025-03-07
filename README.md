@@ -41,50 +41,43 @@ VLAN 60 - Convidados
 ### Switch de Acesso 1 (SW-ACESSO1) ###
     
   Para configurar as portas FastEthernet 1 a 8 como membros da VLAN 10, foram executados os seguintes comandos:
-  >interface range fastEthernet0/1-8
-   >
-   >switchport access vlan 10
+    
+    interface range fastEthernet0/1-8
+    switchport access vlan 10
 
   Do mesmo jeito, foram efetuados os comandos:
 
-  >interface range fastEthernet0/9-16
-  >
-  >switchport access vlan 20
-  >
-  >interface range fastEthernet17-24
-  >
-  >switchport access vlan 30
-
-
+    interface range fastEthernet0/9-16
+    switchport access vlan 20
+  
+    interface range fastEthernet17-24
+    switchport access vlan 30
 
 
 ### Switch de Acesso 2 (SW-ACESSO2) ###
   
   Para configurar as VLANS 40, 50 e 60, foram efetuados os mesmos comandos acima, mas com seus respectivos números:
- >interface range fastEthernet0/1-8
-  >
-  >switchport access vlan 40
-  >
-  >interface range fastEthernet0/9-16
-  >
-  >switchport access vlan 50
-  >
-  >interface range fastEthernet0/17-24
-  >
-  >switchport access vlan 60
->
+      
+      interface range fastEthernet0/1-8
+      switchport access vlan 40
+      
+      interface range fastEthernet0/9-16
+      switchport access vlan 50
+      
+      interface range fastEthernet0/17-24
+      switchport access vlan 60
+
 
 Também foi essencial a configuração das interfaces de uplink no modo trunk, permitindo o tráfego de múltiplas VLANs entre os switches de acesso, switches de distribuição e roteadores. O modo trunk garante que os quadros Ethernet sejam corretamente identificados e encaminhados para suas respectivas VLANs, possibilitando a comunicação eficiente entre os diferentes segmentos da rede.
 
 Na porta, os comandos utilizados:
-  >switchport mode trunk
-  >
-  >switchport trunk allowed vlan 10,20,30 <--- Para o SW-ACESSO1
+  
+    switchport mode trunk
+    switchport trunk allowed vlan 10,20,30 <--- Para o SW-ACESSO1
   
 
-  >switchport mode trunk
-  >
-  >switchport trunk allowed vlan 40,50,60 <--- Para o SW-ACESSO2
+    switchport mode trunk
+    switchport trunk allowed vlan 40,50,60 <--- Para o SW-ACESSO2
 
 ## Switches de Distribuição DIST-1 e DIST-2 (Layer 3)
 
@@ -94,11 +87,9 @@ Foram configuradas seis VLANs (10, 20, 30, 40, 50, 60) e atribuídos nomes espec
 
 Comandos executados:
 
->interface vlan 10
->
->ip address 192.168.10.0 255.255.255.0
->
->ip helper-address 192.168.100.5 <---- IP do servidor DHCP
+    interface vlan 10
+    ip address 192.168.10.0 255.255.255.0
+    ip helper-address 192.168.100.5 <---- IP do servidor DHCP
 
 Esse processo foi repetido para cada VLAN, ajustando os valores específicos de endereço IP, máscara de sub-rede e IP Helper-Address conforme necessário. Dessa forma, cada segmento de rede recebeu a configuração adequada para garantir roteamento eficiente, segmentação lógica e atribuição dinâmica de endereços IP via DHCP.
 
