@@ -74,6 +74,18 @@ VLAN 60 - Convidados
   >switchport access vlan 60
 >
 
+Também foi essencial a configuração das interfaces de uplink no modo trunk, permitindo o tráfego de múltiplas VLANs entre os switches de acesso, switches de distribuição e roteadores. O modo trunk garante que os quadros Ethernet sejam corretamente identificados e encaminhados para suas respectivas VLANs, possibilitando a comunicação eficiente entre os diferentes segmentos da rede.
+
+Na porta, os comandos utilizados:
+  >switchport mode trunk
+  >
+  >switchport trunk allowed vlan 10,20,30 <--- Para o SW-ACESSO1
+  
+
+  >switchport mode trunk
+  >
+  >switchport trunk allowed vlan 40,50,60 <--- Para o SW-ACESSO2
+
 ## Switches de Distribuição DIST-1 e DIST-2 (Layer 3)
 
 Os switches multilayer, DIST-1 e DIST-2, foram implementados para atuar como a camada de distribuição da rede, estabelecendo a comunicação entre os switches de acesso e os roteadores. Diferente dos switches de camada 2, esses dispositivos possuem capacidade de roteamento, permitindo que interfaces sejam configuradas como portas roteáveis. Isso viabiliza a interconexão entre VLANs e a comunicação com os serviços essenciais da rede, como DHCP, DNS e HTTP.
@@ -86,6 +98,8 @@ Comandos executados:
 >
 >ip address 192.168.10.0 255.255.255.0
 >
->ip helper-address 192.168.100.5 #IP do servidor DHCP
+>ip helper-address 192.168.100.5 <---- IP do servidor DHCP
 
 Esse processo foi repetido para cada VLAN, ajustando os valores específicos de endereço IP, máscara de sub-rede e IP Helper-Address conforme necessário. Dessa forma, cada segmento de rede recebeu a configuração adequada para garantir roteamento eficiente, segmentação lógica e atribuição dinâmica de endereços IP via DHCP.
+
+
