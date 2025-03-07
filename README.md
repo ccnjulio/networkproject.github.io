@@ -36,7 +36,7 @@ VLAN 60 - Convidados
 
 ## Switches de Acesso (Layer 2)
 
-# Switch de Acesso 1 (SW-ACESSO1) #
+### Switch de Acesso 1 (SW-ACESSO1) ###
     
   Para configurar as portas FastEthernet 1 a 8 como membros da VLAN 10, foram executados os seguintes comandos:
   >interface range fastEthernet0/1-8
@@ -56,7 +56,7 @@ VLAN 60 - Convidados
 
 
 
-# Switch de Acesso 2 (SW-ACESSO2) #
+### Switch de Acesso 2 (SW-ACESSO2) ###
   
   Para configurar as VLANS 40, 50 e 60, foram efetuados os mesmos comandos acima, mas com seus respectivos números:
  >interface range fastEthernet0/1-8
