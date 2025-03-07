@@ -36,6 +36,8 @@ VLAN 60 - Convidados
 
 ## Switches de Acesso (Layer 2)
 
+  Os switches de acesso, SW-ACESSO1 e SW-ACESSO2, foram implementados para atuar como pontos de conexão entre os dispositivos finais (endpoints) e a infraestrutura de rede principal. Eles desempenham um papel essencial na distribuição do tráfego, garantindo que os pacotes sejam encaminhados corretamente dentro das VLANs definidas.
+
 ### Switch de Acesso 1 (SW-ACESSO1) ###
     
   Para configurar as portas FastEthernet 1 a 8 como membros da VLAN 10, foram executados os seguintes comandos:
@@ -72,5 +74,8 @@ VLAN 60 - Convidados
   >switchport access vlan 60
 >
 
-## Switches de Distribuição (Layer 3)
+## Switches de Distribuição DIST-1 e DIST-2 (Layer 3)
 
+Os switches multilayer, DIST-1 e DIST-2, foram implementados para atuar como a camada de distribuição da rede, estabelecendo a comunicação entre os switches de acesso e os roteadores. Diferente dos switches de camada 2, esses dispositivos possuem capacidade de roteamento, permitindo que interfaces sejam configuradas como portas roteáveis. Isso viabiliza a interconexão entre VLANs e a comunicação com os serviços essenciais da rede, como DHCP, DNS e HTTP.
+
+Foram configuradas seis VLANs (10, 20, 30, 40, 50, 60) e atribuídos nomes específicos para cada uma, garantindo uma segmentação lógica eficiente da rede. Cada VLAN recebeu um endereço IP estático (192.168.10.0/24, 192.168.20.0/24, ..., 192.168.60/24) para atuar como gateway padrão dos dispositivos pertencentes ao respectivo segmento. Além disso, foi configurado um IP Helper-Address em cada interface de VLAN, permitindo que as requisições DHCP dos dispositivos fossem encaminhadas corretamente ao servidor DHCP centralizado. Essa configuração assegura a atribuição automática de endereços IP dentro de cada VLAN, facilitando a gestão e distribuição de endereços na rede.
