@@ -41,3 +41,11 @@ VLAN 60 - Convidados
   >interface range fastEthernet 0/1-8
    >
    >switchport access vlan 10
+
+  Do mesmo jeito, foram efetuados os comandos:
+
+  >interface range fastEthernet 0/9-16
+  >
+  >switchport access vlan 20
+  >interface range fastEthernet 17-24
+  >switchport access vlan 30
