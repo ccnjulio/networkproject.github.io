@@ -91,7 +91,7 @@ Comandos executados:
     ip address 192.168.10.0 255.255.255.0
     ip helper-address 192.168.100.5 <---- IP do servidor DHCP
 
-Esse processo foi repetido para cada VLAN, ajustando os valores específicos de endereço IP, máscara de sub-rede e IP Helper-Address conforme necessário. Dessa forma, cada segmento de rede recebeu a configuração adequada para garantir roteamento eficiente, segmentação lógica e atribuição dinâmica de endereços IP via DHCP.
+>Esse processo foi repetido para cada VLAN, ajustando os valores específicos de endereço IP, máscara de sub-rede e IP Helper-Address conforme necessário. Dessa forma, cada segmento de rede recebeu a configuração adequada para garantir roteamento eficiente, segmentação lógica e atribuição dinâmica de endereços IP via DHCP.
 
 Foi implementado o protocolo de roteamento RIP (Routing Information Protocol) para registrar e distribuir automaticamente as rotas das redes conhecidas entre os dispositivos de Camada 3. Essa configuração permite que os roteadores e switches multilayer compartilhem informações sobre suas redes vizinhas, garantindo a conectividade entre os diferentes segmentos da infraestrutura.
 
