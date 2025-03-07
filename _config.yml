@@ -1,14 +1,12 @@
 title: Infraestrutura de Rede Corporativa no Packet Tracer.
 author:
-  name: Julio Nunes
-  email: jccnunes01@gmail.com
+name: Julio Nunes
+email: jccnunes01@gmail.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  Write an awesome description for your new site here. You can edit this line
-  in _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
+  Este projeto apresenta a simulação de uma infraestrutura de rede corporativa no Cisco Packet Tracer, implementando segmentação por VLANs, redundância e serviços essenciais como DNS, DHCP e HTTP. A topologia foi projetada para otimizar o desempenho, garantir segurança e proporcionar alta disponibilidade, seguindo boas práticas de redes corporativas.
 
 # Build settings
 
