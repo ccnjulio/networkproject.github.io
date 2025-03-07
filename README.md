@@ -90,7 +90,7 @@ Na porta, os comandos utilizados:
 
 Os switches multilayer, DIST-1 e DIST-2, foram implementados para atuar como a camada de distribuição da rede, estabelecendo a comunicação entre os switches de acesso e os roteadores. Diferente dos switches de camada 2, esses dispositivos possuem capacidade de roteamento, permitindo que interfaces sejam configuradas como portas roteáveis. Isso viabiliza a interconexão entre VLANs e a comunicação com os serviços essenciais da rede, como DHCP, DNS e HTTP.
 
-Foram configuradas seis VLANs (10, 20, 30, 40, 50, 60) e atribuídos nomes específicos para cada uma, garantindo uma segmentação lógica eficiente da rede. Cada VLAN recebeu um endereço IP estático (192.168.10.0/24, 192.168.20.0/24, ..., 192.168.60/24) para atuar como gateway padrão dos dispositivos pertencentes ao respectivo segmento. Além disso, foi configurado um IP Helper-Address em cada interface de VLAN, permitindo que as requisições DHCP dos dispositivos fossem encaminhadas corretamente ao servidor DHCP centralizado. Essa configuração assegura a atribuição automática de endereços IP dentro de cada VLAN, facilitando a gestão e distribuição de endereços na rede.
+Foram configuradas seis VLANs (10, 20, 30, 40, 50, 60) e atribuídos nomes específicos para cada uma, garantindo uma segmentação lógica eficiente da rede. Cada VLAN recebeu um endereço IP estático (192.168.10.0/24, 192.168.20.0/24, ..., 192.168.60.0/24) para atuar como gateway padrão dos dispositivos pertencentes ao respectivo segmento. Além disso, foi configurado um IP Helper-Address em cada interface de VLAN, permitindo que as requisições DHCP dos dispositivos fossem encaminhadas corretamente ao servidor DHCP centralizado. Essa configuração assegura a atribuição automática de endereços IP dentro de cada VLAN, facilitando a gestão e distribuição de endereços na rede.
 
 Comandos executados:
 
@@ -101,5 +101,21 @@ Comandos executados:
 >ip helper-address 192.168.100.5 <---- IP do servidor DHCP
 
 Esse processo foi repetido para cada VLAN, ajustando os valores específicos de endereço IP, máscara de sub-rede e IP Helper-Address conforme necessário. Dessa forma, cada segmento de rede recebeu a configuração adequada para garantir roteamento eficiente, segmentação lógica e atribuição dinâmica de endereços IP via DHCP.
+
+Foi implementado o protocolo de roteamento RIP (Routing Information Protocol) para registrar e distribuir automaticamente as rotas das redes conhecidas entre os dispositivos de Camada 3. Essa configuração permite que os roteadores e switches multilayer compartilhem informações sobre suas redes vizinhas, garantindo a conectividade entre os diferentes segmentos da infraestrutura.
+
+## Roteadores (ROUTER1, ROUTER2, ROUTER3)
+
+A configuração dos roteadores foi uma das etapas mais simples do projeto. Cada roteador recebeu endereços IP estáticos para garantir conectividade confiável entre os dispositivos de rede.
+
+Além disso, assim como os switches Layer 3, os roteadores tiveram suas redes conhecidas registradas no protocolo RIP, permitindo a troca automática de informações de roteamento. As redes envolvidas na comunicação entre os roteadores foram:
+
+    200.200.100.0/24
+    200.200.110.0/24
+    200.100.100.0/24
+    200.100.110.0/24
+    200.100.120.0/24
+
+Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagação das rotas entre os dispositivos de Camada 3 da infraestrutura.
 
 
