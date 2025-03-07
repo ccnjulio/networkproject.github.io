@@ -10,4 +10,5 @@ Três roteadores interligam a infraestrutura, proporcionando redundância e cont
 
 A configuração inclui protocolos de roteamento dinâmico e distribuição eficiente do tráfego, garantindo desempenho e disponibilidade para os usuários da rede.
 
+> Abra a imagem e uma nova aba para exibir com melhor resolução.
 ![Branching](assets/INFRAESTRUTURA.png)
