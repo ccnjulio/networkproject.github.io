@@ -124,12 +124,13 @@ Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagaç�
   ### DNS ###
   
   Foi configurado um único domínio para fins de teste no servidor DNS, utilizando o nome de domínio 'site.com', associado ao endereço IP '10.0.0.5'.
-  ![Branching](DNS.png)
+  
+  ![Branching](assets/DNS.png)
 
 
   ### DHCP ###
 
-  ![Branching](DHCP.png)
+  ![Branching](assets/DHCP.png)
   
 
   
