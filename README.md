@@ -130,6 +130,14 @@ Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagaç�
 
   ### DHCP ###
 
+Foram configurados pools de endereços IP para cada rede distribuída nas VLANs. Cada pool incluía as seguintes configurações:
+
+    Gateway padrão (Default Gateway)
+    Servidor DNS (DNS Server)
+    Endereço inicial do pool (Start IP Address)
+    Máscara de sub-rede (Subnet Mask)
+    Número máximo de usuários (Max Users)
+
   ![Branching](assets/DHCP.png)
   
 
