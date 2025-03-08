@@ -106,7 +106,27 @@ Além disso, assim como os switches Layer 3, os roteadores tiveram suas redes co
     200.100.100.0/24
     200.100.110.0/24
     200.100.120.0/24
+    192.168.100.0/24 <---- Rede do DHCP
+    10.0.0.0/8 <---------- Rede do HTTP
 
 Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagação das rotas entre os dispositivos de Camada 3 da infraestrutura.
+
+## Servidores (DHCP, DNS, FTP)
+
+  Os servidores foram hospedados em uma rede dedicada, simulando um ambiente isolado semelhante a uma sala de servidores dentro de uma infraestrutura corporativa. Essa segmentação melhora a organização, segurança e gerenciamento dos serviços essenciais da rede.
+
+  Os IPs reservados para os servidores foram:
+
+    Servidor DNS: 192.168.100.4
+    Servidor DHCP: 192.168.100.5 <--- IP helper-address
+    Servidor FTP: 192.168.100.6
+
+  ### DNS ###
+  
+  Foi configurado um único domínio para fins de teste no servidor DNS, utilizando o nome de domínio 'site.com', associado ao endereço IP '10.0.0.5'.
+  
+  
+
+  
 
 
