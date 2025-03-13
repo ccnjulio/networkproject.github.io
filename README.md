@@ -120,7 +120,7 @@ Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagaç�
 
     Servidor DNS: 192.168.100.4
     Servidor DHCP: 192.168.100.5 <--- IP helper-address
-    Servidor HTTP: 10.0.0.5
+    Servidor FTP: 192.168.100.3
 
   ![Branching](assets/Servidores.png)
 
@@ -145,12 +145,14 @@ Foram configurados pools de endereços IP para cada rede distribuída nas VLANs.
 
   ### FTP ###
 
-  >O servidor não foi completamente configurado, sendo utilizado apenas como um ambiente de demonstração.
+>O servidor não foi completamente configurado, sendo utilizado apenas como um ambiente de demonstração.
 
 
   ### HTTP ###
 
 A configuração da rede foi realizada para viabilizar a hospedagem do servidor web acessível através do endereço http://site.com.
+
+    Servidor HTTP: 10.0.0.5
 
   ![Branching](assets/http.png)
 
