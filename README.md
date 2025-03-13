@@ -111,7 +111,7 @@ Além disso, assim como os switches Layer 3, os roteadores tiveram suas redes co
 
 Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagação das rotas entre os dispositivos de Camada 3 da infraestrutura.
 
-## Servidores (DHCP, DNS, HTTP)
+## Servidores (DHCP, DNS, FTP)
 
 
   Os servidores foram hospedados em uma rede dedicada, simulando um ambiente isolado semelhante a uma sala de servidores dentro de uma infraestrutura corporativa. Essa segmentação melhora a organização, segurança e gerenciamento dos serviços essenciais da rede.
@@ -142,6 +142,11 @@ Foram configurados pools de endereços IP para cada rede distribuída nas VLANs.
     Número máximo de usuários (Max Users)
 
   ![Branching](assets/DHCP.png)
+
+  ### FTP ###
+
+  >O servidor não foi completamente configurado, sendo utilizado apenas como um ambiente de demonstração.
+
 
   ### HTTP ###
 
