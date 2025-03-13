@@ -161,6 +161,13 @@ A configuração da rede foi realizada para viabilizar a hospedagem do servidor 
 Os testes foram conduzidos com o seguinte objetivo: assegurar a comunicação entre os endpoints e os servidores por meio de pacotes ICMP (ping) em ambos os sentidos.
 
 PC VEN1 ---> http://site.com
+
+  ![Branching](assets/Teste1.png)
+
+
+  ## Conclusão ##
+
+Por meio deste projeto, foi possível aprofundar e aplicar na prática conceitos fundamentais de redes, como a segmentação em VLANs, roteamento inter-VLAN, protocolos de redundância, conectividade entre sub-redes, distribuição de serviços, configuração de dispositivos de camada 2 (Switches) e camada 3 (Roteadores), além da implementação de serviços como DHCP e DNS. A experiência também envolveu o gerenciamento de tabelas de roteamento, trunking e a otimização do tráfego para garantir desempenho e segurança.
   
   
 
