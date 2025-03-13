@@ -113,6 +113,7 @@ Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagaç�
 
 ## Servidores (DHCP, DNS, HTTP)
 
+
   Os servidores foram hospedados em uma rede dedicada, simulando um ambiente isolado semelhante a uma sala de servidores dentro de uma infraestrutura corporativa. Essa segmentação melhora a organização, segurança e gerenciamento dos serviços essenciais da rede.
 
   Os IPs reservados para os servidores foram:
@@ -121,9 +122,11 @@ Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagaç�
     Servidor DHCP: 192.168.100.5 <--- IP helper-address
     Servidor HTTP: 10.0.0.5
 
+  ![Branching](assets/Servidores.png)
+
   ### DNS ###
   
-  Foi configurado um único domínio para fins de teste no servidor DNS, utilizando o nome de domínio 'site.com', associado ao endereço IP '10.0.0.5'.
+Foi configurado um único domínio para fins de teste no servidor DNS, utilizando o nome de domínio 'site.com', associado ao endereço IP '10.0.0.5'.
   
   ![Branching](assets/DNS.png)
 
@@ -141,6 +144,10 @@ Foram configurados pools de endereços IP para cada rede distribuída nas VLANs.
   ![Branching](assets/DHCP.png)
 
   ### HTTP ###
+
+A configuração da rede foi realizada para viabilizar a hospedagem do servidor web acessível através do endereço http://site.com.
+
+  ![Branching](assets/http.png)
 
   
   
