@@ -124,14 +124,14 @@ Essa abordagem garantiu um roteamento dinâmico eficiente e a correta propagaç�
 
   ![Branching](assets/Servidores.png)
 
-  ### DNS ###
+  ## DNS ##
   
 Foi configurado um único domínio para fins de teste no servidor DNS, utilizando o nome de domínio 'site.com', associado ao endereço IP '10.0.0.5'.
   
   ![Branching](assets/DNS.png)
 
 
-  ### DHCP ###
+  ## DHCP ##
 
 Foram configurados pools de endereços IP para cada rede distribuída nas VLANs. Cada pool incluía as seguintes configurações:
 
@@ -143,12 +143,12 @@ Foram configurados pools de endereços IP para cada rede distribuída nas VLANs.
 
   ![Branching](assets/DHCP.png)
 
-  ### FTP ###
+  ## FTP ##
 
 >O servidor não foi completamente configurado, sendo utilizado apenas como um ambiente de demonstração.
 
 
-  ### HTTP ###
+  ## HTTP ##
 
 A configuração da rede foi realizada para viabilizar a hospedagem do servidor web acessível através do endereço http://site.com.
 
@@ -156,6 +156,11 @@ A configuração da rede foi realizada para viabilizar a hospedagem do servidor 
 
   ![Branching](assets/http.png)
 
+  ## Teste de Conexão ##
+
+Os testes foram conduzidos com o seguinte objetivo: assegurar a comunicação entre os endpoints e os servidores por meio de pacotes ICMP (ping) em ambos os sentidos.
+
+PC VEN1 ---> http://site.com
   
   
 
